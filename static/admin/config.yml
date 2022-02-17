@@ -1,0 +1,42 @@
+backend:
+  name: github
+  repo: agtz92/english-stuff
+  branch: main
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: productos
+    label: Productos
+    folder: cms/productos
+    create: true
+    fields:
+      - { name: title, label: Titulo, hint: Título del Producto, required: true}
+      - { label: "Imagen Principal", hint: Usar una imagen en alta resolucion y horizontal, name: "featuredimage", widget: image, required: true}
+      - { collection: categoria, valueField: categoria, searchFields: ["categoria"], displayFields: ["categoria"], widget: relation, name: categoria, label: Categoria, required: true, multiple: false, hint: Poner cateogoria a la que pertenece el producto. OBLIGATORIO}
+      - { label: "Tags", name: "tags", widget: "list", hint: Separar con comas cada tag relacionado al producto (ej. gimnasio, artes marciales, tae kwon do) poner al menos 3 tags por post, ideal 5, required: true}
+      - { name: short-description, label: Descripcion Corta, widget: markdown, hint: Descripcion corta de cada producto para fines de SEO, required: true}
+      - { name: prod-desc, label: Descripción larga del producto, widget: markdown }
+      - { name: specs, label: Especificaciones técnicas del producto, widget: markdown }
+      - { collection: sizes, valueField: sizes, searchFields: ["sizes"], displayFields: ["sizes"], widget: relation, name: sizes, label: Medidas del producto, required: true, multiple: false, hint: Poner medidas del producto}
+
+ 
+  - name: categoria
+    label: Categoria
+    folder: cms/categorias
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {widget: string, name: categoria, label: Categoria, required: true, hint: Categoría del producto ej. Piso deportivo, Neopreno en Rollo, Vialidades }
+      - {label: "Imagen de la Categoria", name: "categoryimage", widget: image}
+
+  - name: sizes
+    label: Medidas
+    folder: cms/sizes
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {widget: string, name: name, label: Nombre de la línea o producto, required: true, hint: Nombre de la línea de medidas }
+      - { name: sizes, label: Medidas del producto en forma de tabla HTML , widget: markdown }
+  
