@@ -32,9 +32,11 @@ collections:
       - {label: "Imagen de la Categoria", name: "categoryimage", widget: image}
 
   - name: sizes
+    identifier_field: name
     label: Medidas
     folder: cms/sizes
     create: true
+    slug: "{{slug}}"
     fields:
       - {widget: string, name: name, label: Nombre de la línea o producto, required: true, hint: Nombre de la línea de medidas }
       - { name: date, label: Date, widget: datetime }
