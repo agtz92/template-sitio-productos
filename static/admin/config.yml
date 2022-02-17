@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: agtz92/english-stuff
+  repo: agtz92/template-sitio-productos
   branch: main
 
 media_folder: static/assets
