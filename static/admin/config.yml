@@ -23,6 +23,7 @@ collections:
 
  
   - name: categoria
+    identifier_field: name
     label: Categoria
     folder: cms/categorias
     create: true
