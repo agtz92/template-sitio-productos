@@ -35,7 +35,7 @@ collections:
     label: Medidas
     folder: cms/sizes
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
     fields:
       - {widget: string, name: name, label: Nombre de la línea o producto, required: true, hint: Nombre de la línea de medidas }
       - { name: sizes, label: Medidas del producto en forma de tabla HTML , widget: markdown }
