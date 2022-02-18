@@ -10,6 +10,7 @@ collections:
   - name: productos
     label: Productos
     folder: cms/productos
+    slug: "{{slug}}"
     create: true
     fields:
       - { name: title, label: Titulo, hint: Título del Producto, required: true}
