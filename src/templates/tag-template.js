@@ -1,20 +1,18 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby'
 import Layout from "../components/layouts/Layout";
 //Generic Styles
 import "../webflow_styles/normalize.css";
 import "../webflow_styles/webflow.css";
-import Cards from "../components/symbols/Cards";
 
-const BlogPost = ({ data }) => {
-  const post = data.markdownRemark;
-  return (
+const TagTemplate = ({data}) =>{
+return(
     <Layout>
-      <Cards title={post.frontmatter.title} img={post.frontmatter.featuredimage} text={post.frontmatter.short_description}/>
+
     </Layout>
-  );
-};
-export default BlogPost;
+);
+}
+export default TagTemplate;
 
 export const query = graphql`
   query($slug: String!) {
@@ -28,9 +26,9 @@ export const query = graphql`
         short_description
         tags
       }
-      fields {
-        slug
+      fields{
+          slug
       }
     }
   }
-`;
+`

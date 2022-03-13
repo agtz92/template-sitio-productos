@@ -1,4 +1,5 @@
 import * as React from "react";
+import { graphql } from 'gatsby'
 import Layout from "../components/layouts/Layout";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
@@ -6,7 +7,7 @@ import Grid3x3 from "../components/wrappers/Grid3x3";
 import "../webflow_styles/normalize.css";
 import "../webflow_styles/webflow.css";
 
-const Categorias = () => {
+const Categorias = ({data}) => {
   const smallDescriptionDummy =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
 
@@ -58,3 +59,22 @@ const Categorias = () => {
 };
 
 export default Categorias;
+
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        categoria
+        featuredimage
+        date(formatString: "MM-DD-YYYY")
+        short_description
+        tags
+      }
+      fields{
+          slug
+      }
+    }
+  }
+`

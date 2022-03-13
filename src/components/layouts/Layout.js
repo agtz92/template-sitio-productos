@@ -6,7 +6,7 @@ import "../../styles/colors.css"
 const Layout = ({children}) =>{
     return(
         <React.Fragment>
-            <NewNavBar sticky/>
+            <NewNavBar sticky />
             {children}
             <Footer/>
         </React.Fragment>

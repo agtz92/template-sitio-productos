@@ -7,21 +7,11 @@ tags:
   - artesmarciales
   - taekwondo
 short-description: >-
-  <!--StartFragment-->
-
-
   Bacon ipsum dolor amet pork chislic burgdoggen rump. Prosciutto sausage chuck meatloaf spare ribs tri-tip pancetta venison pig leberkas buffalo ground round brisket t-bone landjaeger. Tongue doner tenderloin filet mignon tail. Shank chicken salami, chuck kevin buffalo bresaola tongue beef landjaeger. Porchetta pork chop turducken tongue. Tongue pancetta corned beef pig, cupim ribeye jowl bacon.
 
-
-  <!--EndFragment-->
 prod-desc: >-
-  <!--StartFragment-->
-
-
   Bacon ipsum dolor amet pork chislic burgdoggen rump. Prosciutto sausage chuck meatloaf spare ribs tri-tip pancetta venison pig leberkas buffalo ground round brisket t-bone landjaeger. Tongue doner tenderloin filet mignon tail. Shank chicken salami, chuck kevin buffalo bresaola tongue beef landjaeger. Porchetta pork chop turducken tongue. **Tongue pancetta corned beef pig, cupim ribeye jowl bacon.**
 
-
-  <!--EndFragment--><!--StartFragment-->
 
 
   # BACON
@@ -30,15 +20,12 @@ prod-desc: >-
   Bacon ipsum dolor amet pork chislic burgdoggen rump. Prosciutto sausage chuck meatloaf spare ribs tri-tip pancetta venison pig leberkas buffalo ground round brisket t-bone landjaeger. Tongue doner tenderloin filet mignon tail. Shank chicken salami, chuck kevin buffalo bresaola tongue beef landjaeger. Porchetta pork chop turducken tongue. Tongue pancetta corned beef pig, cupim ribeye jowl bacon.
 
 
-  <!--EndFragment-->
 specs: >-
-  <!--StartFragment-->
 
 
   Bacon ipsum dolor amet pork chislic burgdoggen rump. Prosciutto sausage chuck meatloaf spare ribs tri-tip pancetta venison pig leberkas buffalo ground round brisket t-bone landjaeger. Tongue doner tenderloin filet mignon tail. Shank chicken salami, chuck kevin buffalo bresaola tongue beef landjaeger. Porchetta pork chop turducken tongue. Tongue pancetta corned beef pig, cupim ribeye jowl bacon.
 
 
-  <!--EndFragment-->
 sizes: |-
   <table class="demo">
   	

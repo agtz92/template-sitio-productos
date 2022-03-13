@@ -1,4 +1,5 @@
 import * as React from "react";
+import { graphql } from "gatsby";
 //Generic Styles
 import "../webflow_styles/normalize.css";
 import "../webflow_styles/webflow.css";
@@ -16,7 +17,8 @@ const smallDescriptionDummy =
 const timeElapsed = Date.now();
 const today = new Date(timeElapsed);
 // markup
-const IndexPage = () => {
+const IndexPage = ({data}) => {
+  const { edges} = data.allMarkdownRemark
   return (
     <React.Fragment>
       <Layout>
@@ -48,13 +50,17 @@ const IndexPage = () => {
         <Grid3x3
           products={
             <React.Fragment>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
-              <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
+              {edges.map(({ node }) => {
+                    const { slug } = node.fields
+                    const { title } = node.frontmatter
+                    const { short_description } = node.frontmatter
+                    const { featuredimage } = node.frontmatter
+                    const { categoria } = node.frontmatter
+                    const { tags }=node.frontmatter
+                    return (
+                      <ProductPreview key={slug} price={categoria} title={title} text={short_description}/>
+                    )
+                })}
             </React.Fragment>
           }
         />
@@ -169,3 +175,24 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(filter: {frontmatter: {short_description: {ne: null}}}) {
+      edges {
+        node {
+          frontmatter {
+            featuredimage
+            tags
+            title
+            categoria
+            short_description
+          }
+          fields{
+            slug
+          }
+        }
+      }
+    }
+  }
+`

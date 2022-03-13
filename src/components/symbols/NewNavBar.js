@@ -17,7 +17,7 @@ const NewNavBar = (props) =>{
         data-easing="ease"
         data-easing2="ease"
         role="banner"
-        className={`navbar w-nav ${props.sticky ? "sticky" : ""}`}
+        className={`navbar w-nav${props.sticky ? " sticky" : ""}`}
       >
         <div className="container-3 w-container">
           <Link to="/" className="w-nav-brand">

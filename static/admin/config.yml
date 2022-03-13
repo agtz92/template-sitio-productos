@@ -35,6 +35,7 @@ collections:
 
   - name: sizes
     identifier_field: name
+    title: name
     label: Medidas
     folder: cms/sizes
     create: true
