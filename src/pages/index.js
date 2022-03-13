@@ -58,7 +58,7 @@ const IndexPage = ({data}) => {
                     const { categoria } = node.frontmatter
                     const { tags }=node.frontmatter
                     return (
-                      <ProductPreview key={slug} price={categoria} title={title} text={short_description}/>
+                      <ProductPreview key={slug} price={categoria} title={title} text={short_description} link={slug}/>
                     )
                 })}
             </React.Fragment>

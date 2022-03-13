@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby"
 import "../../webflow_styles/symbols/productpreview.css"
 import img from "../../images/Webp.net-resizeimage-min.jpg";
 
@@ -22,9 +23,9 @@ const ProductPreview = (props) => {
         <p className="paragraph-regular">
           {props.text}
         </p>
-        <a href="#" className="button-regular w-button bck-color1">
+        <Link to={props.link} className="button-regular w-button bck-color1">
           Ver Más
-        </a>
+        </Link>
       </div>
     </div>
   );
