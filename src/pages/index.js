@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Fade } from "react-awesome-reveal";
 import { graphql } from "gatsby";
 //Generic Styles
 import "../webflow_styles/normalize.css";
@@ -17,16 +18,18 @@ const smallDescriptionDummy =
 const timeElapsed = Date.now();
 const today = new Date(timeElapsed);
 // markup
-const IndexPage = ({data}) => {
-  const { edges} = data.allMarkdownRemark
+const IndexPage = ({ data }) => {
+  const { edges } = data.allMarkdownRemark;
   return (
     <React.Fragment>
       <Layout>
-        <Cards
-          title="Cards Component"
-          subtitle="Dummy Subtitle"
-          text={smallDescriptionDummy}
-        />
+        <Fade>
+          <Cards
+            title="Cards Component"
+            subtitle="Dummy Subtitle"
+            text={smallDescriptionDummy}
+          />
+        </Fade>
         <SimpleCard
           title="Simple Card Component"
           text={smallDescriptionDummy}
@@ -51,20 +54,30 @@ const IndexPage = ({data}) => {
           products={
             <React.Fragment>
               {edges.map(({ node }) => {
-                    const { slug } = node.fields
-                    const { title } = node.frontmatter
-                    const { short_description } = node.frontmatter
-                    const { featuredimage } = node.frontmatter
-                    const { categoria } = node.frontmatter
-                    const { tags }=node.frontmatter
-                    return (
-                      <ProductPreview key={slug} price={categoria} title={title} text={short_description} link={slug}/>
-                    )
-                })}
+                const { slug } = node.fields;
+                const { title } = node.frontmatter;
+                const { short_description } = node.frontmatter;
+                const { featuredimage } = node.frontmatter;
+                const { categoria } = node.frontmatter;
+                const { tags } = node.frontmatter;
+                return (
+                  <ProductPreview
+                    key={slug}
+                    price={categoria}
+                    title={title}
+                    text={short_description}
+                    link={slug}
+                  />
+                );
+              })}
             </React.Fragment>
           }
         />
-        <ProductPreview title="Product Preview" price="$150.99" text={smallDescriptionDummy}/>
+        <ProductPreview
+          title="Product Preview"
+          price="$150.99"
+          text={smallDescriptionDummy}
+        />
         <Div5050
           left={
             <React.Fragment>
@@ -178,7 +191,9 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {short_description: {ne: null}}}) {
+    allMarkdownRemark(
+      filter: { frontmatter: { short_description: { ne: null } } }
+    ) {
       edges {
         node {
           frontmatter {
@@ -188,11 +203,11 @@ export const pageQuery = graphql`
             categoria
             short_description
           }
-          fields{
+          fields {
             slug
           }
         }
       }
     }
   }
-`
+`;
