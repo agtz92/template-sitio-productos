@@ -12,6 +12,7 @@ import NewsPreviewBig from "../components/symbols/NewsPreviewBig";
 import Div5050 from "../components/wrappers/Div5050";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
+import CategoryPreview from "../components/symbols/CategoryPreview";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -23,6 +24,24 @@ const IndexPage = ({ data }) => {
   return (
     <React.Fragment>
       <Layout>
+        <Grid3x3
+          products={
+            <React.Fragment>
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+              <CategoryPreview />
+            </React.Fragment>
+          }
+        />
         <Fade>
           <Cards
             title="Cards Component"
