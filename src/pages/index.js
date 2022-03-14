@@ -211,25 +211,22 @@ export default IndexPage;
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
-      limit: 2000
-      filter: {frontmatter: {categoryimage: {ne: null}}}
+      filter: { frontmatter: { short_description: { ne: null } } }
     ) {
-      group(field: frontmatter___categoria) {
-        group(field: id) {
-          edges {
-            node {
-              frontmatter {
-                categoria
-                categoryimage
-              }
-              fields {
-                slug
-              }
-            }
+      edges {
+        node {
+          frontmatter {
+            featuredimage
+            tags
+            title
+            categoria
+            short_description
+          }
+          fields {
+            slug
           }
         }
       }
     }
   }
-  
 `;
