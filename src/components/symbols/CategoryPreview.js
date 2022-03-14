@@ -18,7 +18,7 @@ const CategoryPreview = (props) => {
         className="image-2"
       />
       <div className="div-category-title-wrapper">
-        <h1 className="text-big white">Nombre del producto</h1>
+        <h1 className="text-big white">{props.title}</h1>
         <a href="#" className="button-regular w-button bck-color1">
           Button Text
         </a>

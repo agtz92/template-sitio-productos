@@ -24,7 +24,6 @@ collections:
 
  
   - name: categoria
-    identifier_field: name
     title: name
     label: Categoria
     folder: cms/categorias
