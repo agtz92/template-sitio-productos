@@ -1,6 +1,6 @@
 ---
 title: Albercas
-featuredimage: /assets/webp.net-resizeimage-min.jpg
+prodimage: ../../static/assets/webp.net-resizeimage-min.jpg
 categoria: Deportes
 tags:
   - albercas

@@ -50,11 +50,17 @@ exports.createPages = async ({ graphql, actions }) => {
       ) {
         edges {
           node {
+            
             fields {
               slug
             }
             frontmatter {
               tags
+              prodimage {
+                childrenImageSharp {
+                  gatsbyImageData(aspectRatio: 0.5)
+                }
+              }
             }
           }
         }

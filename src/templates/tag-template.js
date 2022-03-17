@@ -50,7 +50,7 @@ export const pageQuery = graphql`
               }
             }
             categoria
-            featuredimage {
+            prodimage{
               childrenImageSharp {
                 gatsbyImageData(aspectRatio: 1.5)
               }

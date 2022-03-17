@@ -1,7 +1,9 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link} from "gatsby"
 import "../../webflow_styles/symbols/categorypreview.css";
-import img from "../../images/Webp.net-resizeimage-min.jpg";
+
+import kebabCase from "lodash/kebabCase"
 
 const CategoryPreview = (props) => {
 
@@ -13,9 +15,7 @@ const CategoryPreview = (props) => {
       <GatsbyImage image={props.image} alt={props.alt} />
       <div className="div-category-title-wrapper">
         <h1 className="text-big white">{props.title}</h1>
-        <a href="#" className="button-regular w-button bck-color1">
-          Button Text
-        </a>
+        <Link className="button-regular w-button bck-color1" to={`/categories/${kebabCase(props.title)}/`}>Ir</Link>
       </div>
     </div>
   );

@@ -13,6 +13,7 @@ import NewsPreviewBig from "../components/symbols/NewsPreviewBig";
 import Div5050 from "../components/wrappers/Div5050";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
+import CategoryPreview from "../components/symbols/CategoryPreview";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -54,33 +55,18 @@ const IndexPage = ({ data }) => {
         <Grid3x3
           products={
             <React.Fragment>
-              {edges.map(({ node }) => {
-                const { slug } = node.fields;
-                const { title } = node.frontmatter;
-                const { short_description } = node.frontmatter;
-                const { categoria } = node.frontmatter;
-                const { tags } = node.frontmatter;
-                
-                return (
-                  <ProductPreview
-                    key={slug}
-                    price={categoria}
-                    title={title}
-                    text={short_description}
-                    link={slug}
-                    image={getImage(node.frontmatter.featuredimage)}
-                    alt={title}
-                  />
-                );
-              })}
+              {edges.map(({ node }) => (
+                <CategoryPreview
+                  key={node.id}
+                  title={node.frontmatter.categoria}
+                  image={getImage(node.frontmatter.categoryimage)}
+                  alt={node.frontmatter}
+                />
+              ))}
             </React.Fragment>
           }
         />
-        <ProductPreview
-          title="Product Preview"
-          price="$150.99"
-          text={smallDescriptionDummy}
-        />
+        
         <Div5050
           left={
             <React.Fragment>
@@ -193,34 +179,36 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-query {
-  allMarkdownRemark(filter: {frontmatter: {featuredimage: {relativePath: {ne: null}}}}) {
-    edges {
-      node {
-        frontmatter {
-          categoryimage {
-            childImageSharp {
-              gatsbyImageData(aspectRatio: 1.5)
+  query {
+    allMarkdownRemark(
+      filter: { frontmatter: { categoryimage: { relativePath: { ne: null } } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            categoryimage {
+              childImageSharp {
+                gatsbyImageData(aspectRatio: 0.5)
+              }
             }
-          }
-          categoria
-          featuredimage {
-            childrenImageSharp {
-              gatsbyImageData(aspectRatio: 1.5)
+            categoria
+            prodimage {
+              childrenImageSharp {
+                gatsbyImageData(aspectRatio: 1.5)
+              }
             }
+            name
+            prod_desc
+            short_description
+            specs
+            tags
+            title
           }
-          name
-          prod_desc
-          short_description
-          specs
-          tags
-          title
-        }
-        fields {
-          slug
+          fields {
+            slug
+          }
         }
       }
     }
   }
-}
 `;

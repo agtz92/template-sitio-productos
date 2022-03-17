@@ -47,11 +47,11 @@ export const pageQuery = graphql`
           frontmatter {
             categoryimage {
               childImageSharp {
-                gatsbyImageData(aspectRatio: 1.5)
+                gatsbyImageData(aspectRatio: 0.5)
               }
             }
             categoria
-            featuredimage {
+            prodimage {
               childrenImageSharp {
                 gatsbyImageData(aspectRatio: 1.5)
               }

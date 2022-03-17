@@ -1,6 +1,6 @@
 ---
 title: Neopreno en Placa
-featuredimage: /assets/7-bird-colorful-peacock-wallpaper-preview.jpg
+prodimage: ../../static/assets/7-bird-colorful-peacock-wallpaper-preview.jpg
 categoria: Hule y Neopreno En Rollo
 tags:
   - neopreno
