@@ -1,4 +1,5 @@
 import * as React from "react";
+import { getImage } from "gatsby-plugin-image";
 import { Fade } from "react-awesome-reveal";
 import { graphql } from "gatsby";
 //Generic Styles
@@ -12,7 +13,6 @@ import NewsPreviewBig from "../components/symbols/NewsPreviewBig";
 import Div5050 from "../components/wrappers/Div5050";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
-import CategoryPreview from "../components/symbols/CategoryPreview";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -24,24 +24,6 @@ const IndexPage = ({ data }) => {
   return (
     <React.Fragment>
       <Layout>
-        <Grid3x3
-          products={
-            <React.Fragment>
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-              <CategoryPreview />
-            </React.Fragment>
-          }
-        />
         <Fade>
           <Cards
             title="Cards Component"
@@ -76,9 +58,9 @@ const IndexPage = ({ data }) => {
                 const { slug } = node.fields;
                 const { title } = node.frontmatter;
                 const { short_description } = node.frontmatter;
-                const { featuredimage } = node.frontmatter;
                 const { categoria } = node.frontmatter;
                 const { tags } = node.frontmatter;
+                
                 return (
                   <ProductPreview
                     key={slug}
@@ -86,6 +68,8 @@ const IndexPage = ({ data }) => {
                     title={title}
                     text={short_description}
                     link={slug}
+                    image={getImage(node.frontmatter.featuredimage)}
+                    alt={title}
                   />
                 );
               })}
@@ -209,24 +193,34 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(
-      filter: { frontmatter: { short_description: { ne: null } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            featuredimage
-            tags
-            title
-            categoria
-            short_description
+query {
+  allMarkdownRemark(filter: {frontmatter: {featuredimage: {relativePath: {ne: null}}}}) {
+    edges {
+      node {
+        frontmatter {
+          categoryimage {
+            childImageSharp {
+              gatsbyImageData(aspectRatio: 1.5)
+            }
           }
-          fields {
-            slug
+          categoria
+          featuredimage {
+            childrenImageSharp {
+              gatsbyImageData(aspectRatio: 1.5)
+            }
           }
+          name
+          prod_desc
+          short_description
+          specs
+          tags
+          title
+        }
+        fields {
+          slug
         }
       }
     }
   }
+}
 `;

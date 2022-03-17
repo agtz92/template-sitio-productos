@@ -4,7 +4,7 @@ backend:
   branch: master
 
 media_folder: static/assets
-public_folder: /assets
+public_folder: /static
 
 collections:
   - name: productos
@@ -24,7 +24,6 @@ collections:
 
  
   - name: categoria
-    title: name
     label: Categoria
     folder: cms/categorias
     create: true

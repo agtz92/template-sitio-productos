@@ -38,25 +38,32 @@ TagTemplate.propTypes = {
 };
 export default TagTemplate;
 
-export const query = graphql`
-  query($tag: String) {
-    allMarkdownRemark(
-      limit: 2000
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark {
       edges {
         node {
-          fields {
-            slug
-          }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            featuredimage
+            categoryimage {
+              childImageSharp {
+                gatsbyImageData(aspectRatio: 1.5)
+              }
+            }
+            categoria
+            featuredimage {
+              childrenImageSharp {
+                gatsbyImageData(aspectRatio: 1.5)
+              }
+            }
+            name
+            prod_desc
+            short_description
+            specs
             tags
             title
-            categoria
-            short_description
+          }
+          fields {
+            slug
           }
         }
       }

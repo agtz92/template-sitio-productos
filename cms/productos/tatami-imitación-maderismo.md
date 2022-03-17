@@ -1,6 +1,6 @@
 ---
 title: Tatami Imitación Maderismo
-featuredimage: /static/7-bird-colorful-peacock-wallpaper-preview.jpg
+featuredimage: ../../static/7-bird-colorful-peacock-wallpaper-preview.jpg
 categoria: Deportes
 tags:
   - Tatami

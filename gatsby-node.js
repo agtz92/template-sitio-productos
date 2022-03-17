@@ -5,6 +5,23 @@ const postTemplate = path.resolve("./src/templates/blog-post.js")
 const tagTemplate = path.resolve("src/templates/tag-template.js")
 const categTemplate = path.resolve("src/templates/categories.js")
 
+
+//Create Types
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions
+//   createTypes(`
+//     type MarkdownRemark implements Node {
+//       frontmatter: Frontmatter
+//       categoryimage: File @link(from: "fields.localFile")
+//       featuredimage: File @link(from: "fields.localFile")
+//     }
+//     type Frontmatter {
+//       title: String!
+//       categoryimage: String
+//       featuredimage: String
+//     }
+//   `)
+// }
 //OnCreateNode
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -17,6 +34,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
   }
 }
+
+
+
+
 
 //create Pages
 exports.createPages = async ({ graphql, actions }) => {

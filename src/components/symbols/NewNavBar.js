@@ -30,19 +30,19 @@ const NewNavBar = (props) =>{
             />
           </Link>
           <nav role="navigation" className="nav-menu w-nav-menu">
-            <Link to="/" className="navlink w-nav-link" activeClassName="w--current color1">
+            <Link to="/" className="navlink w-nav-link" activeclassname="w--current color1">
               Home
             </Link>
-            <a href="#" className="navlink w-nav-link" activeClassName="w--current color1">
+            <a href="#" className="navlink w-nav-link" activeclassname="w--current color1">
               Products
             </a>
-            <a href="#" className="navlink w-nav-link" activeClassName="w--current color1">
+            <a href="#" className="navlink w-nav-link" activeclassname="w--current color1">
               About Us
             </a>
-            <a href="#" className="navlink w-nav-link" activeClassName="w--current color1">
+            <a href="#" className="navlink w-nav-link" activeclassname="w--current color1">
               Contact Us
             </a>
-            <a href="#" className="navlink-contrast bck-color1 w-nav-link" activeClassName="w--current color1">
+            <a href="#" className="navlink-contrast bck-color1 w-nav-link" activeclassname="w--current color1">
               Get a Quote
             </a>
           </nav>
@@ -73,35 +73,35 @@ const NewNavBar = (props) =>{
               to="/"
               aria-current="page"
               className="navlink w-nav-link w--nav-link-open"
-              activeClassName="w--current color1"
+              activeclassname="w--current color1"
             >
               Home
             </Link>
             <a
               href="/products"
               className="navlink w-nav-link w--nav-link-open"
-              activeClassName="w--current color1"
+              activeclassname="w--current color1"
             >
               Products
             </a>
             <a
               href="/about-us"
               className="navlink w-nav-link w--nav-link-open"
-              activeClassName="w--current color1"
+              activeclassname="w--current color1"
             >
               About Us
             </a>
             <a
               href="/contact-us"
               className="navlink w-nav-link w--nav-link-open"
-              activeClassName="w--current color1"
+              activeclassname="w--current color1"
             >
               Contact Us
             </a>
             <a
               href="#"
               className="navlink-contrast bck-color1 w-nav-link w--nav-link-open"
-              activeClassName="w--current color1"
+              activeclassname="w--current color1"
             >
               Get a Quote
             </a>

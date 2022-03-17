@@ -1,6 +1,6 @@
 ---
 title: Tatami
-featuredimage: /assets/webp.net-resizeimage-min.jpg
+featuredimage: ../../static/assets/2HFSTKr.jpg
 categoria: Hule y Neopreno En Rollo
 tags:
   - tatami

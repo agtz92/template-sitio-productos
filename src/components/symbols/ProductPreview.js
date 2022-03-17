@@ -1,19 +1,15 @@
 import React from "react";
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import "../../webflow_styles/symbols/productpreview.css"
-import img from "../../images/Webp.net-resizeimage-min.jpg";
+import img from "../../images/dummyimage.jpg";
 
 const ProductPreview = (props) => {
   return (
     <div className="div-shadow">
       <div className="cards-image-mask">
-        <img
-          srcSet={img}
-          loading="lazy"
-          sizes="100vw"
-          alt=""
-          className="cards-image"
-        />
+      <GatsbyImage className="cards-image" image={props.image} alt={props.alt} />
+      
       </div>
       <div className="div-product-description">
         <h1 className="text-big">{props.title}</h1>
@@ -31,3 +27,4 @@ const ProductPreview = (props) => {
   );
 };
 export default ProductPreview;
+

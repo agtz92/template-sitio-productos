@@ -1,4 +1,5 @@
 import * as React from "react";
+import kebabCase from "lodash/kebabCase"
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/layouts/Layout";
@@ -88,23 +89,29 @@ Categorias.propTypes = {
 
 export default Categorias;
 
-export const query = graphql`
-  query($categoria: String) {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { categoria: { in: [$categoria] } } }
-    ) {
-      totalCount
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark {
       edges {
         node {
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            featuredimage
+            categoryimage {
+              childImageSharp {
+                gatsbyImageData(aspectRatio: 1.5)
+              }
+            }
+            categoria
+            featuredimage {
+              childrenImageSharp {
+                gatsbyImageData(aspectRatio: 1.5)
+              }
+            }
+            name
+            prod_desc
+            short_description
+            specs
             tags
             title
-            categoria
-            short_description
           }
           fields {
             slug

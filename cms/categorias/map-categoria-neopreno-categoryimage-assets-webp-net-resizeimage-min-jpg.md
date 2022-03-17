@@ -1,4 +1,4 @@
 ---
 categoria: Neopreno
-categoryimage: /assets/webp.net-resizeimage-min.jpg
+categoryimage: ../../static/assets/webp.net-resizeimage-min.jpg
 ---

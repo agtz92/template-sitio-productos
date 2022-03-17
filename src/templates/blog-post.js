@@ -16,17 +16,24 @@ const BlogPost = ({ data }) => {
 };
 export default BlogPost;
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+export const pageQuery = graphql`
+  query {
+    markdownRemark {
       frontmatter {
-        title
         categoria
-        featuredimage
-        date(formatString: "MM-DD-YYYY")
+        date
+        name
+        prod_desc
         short_description
+        sizes
+        specs
         tags
+        title
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(aspectRatio: 1.5)
+          }
+        }
       }
       fields {
         slug
