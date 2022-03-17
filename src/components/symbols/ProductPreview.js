@@ -2,14 +2,11 @@ import React from "react";
 import { Link} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import "../../webflow_styles/symbols/productpreview.css"
-import img from "../../images/dummyimage.jpg";
 
 const ProductPreview = (props) => {
   return (
-    <div className="div-shadow">
-      <div className="cards-image-mask">
+    <div className="div-shadow" key={props.key}>
       <GatsbyImage image={props.img} alt={props.alt} />
-      </div>
       <div className="div-product-description">
         <h1 className="text-big">{props.title}</h1>
         <div className="label-prices color2">
