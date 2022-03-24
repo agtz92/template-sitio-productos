@@ -1,10 +1,9 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const _ = require("lodash")
-const postTemplate = path.resolve("./src/templates/blog-post.js")
-const tagTemplate = path.resolve("src/templates/tag-template.js")
-const categTemplate = path.resolve("src/templates/categories.js")
-
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
+const _ = require("lodash");
+const postTemplate = path.resolve("./src/templates/blog-post.js");
+const tagTemplate = path.resolve("src/templates/tag-template.js");
+const categTemplate = path.resolve("src/templates/categories.js");
 
 //Create Types
 // exports.createSchemaCustomization = ({ actions }) => {
@@ -24,25 +23,21 @@ const categTemplate = path.resolve("src/templates/categories.js")
 // }
 //OnCreateNode
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const slug = createFilePath({ node, getNode, basePath: `pages` });
     createNodeField({
       node,
       name: `slug`,
       value: slug,
-    })
+    });
   }
-}
-
-
-
-
+};
 
 //create Pages
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
- const result = await graphql(`
+  const { createPage } = actions;
+  const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -50,7 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
       ) {
         edges {
           node {
-            
             fields {
               slug
             }
@@ -80,13 +74,12 @@ exports.createPages = async ({ graphql, actions }) => {
           fieldValue
         }
       }
-      
     }
-  `)
- // handle errors
+  `);
+  // handle errors
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`)
-    return
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
   }
 
   //Use Blog Template
@@ -99,33 +92,33 @@ exports.createPages = async ({ graphql, actions }) => {
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
-    })
-  })
+    });
+  });
 
   //Tags
   // Extract tag data from query
-  const tags = result.data.tagsGroup.group
+  const tags = result.data.tagsGroup.group;
   // Make tag pages
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
       },
-    })
-  })
+    });
+  });
   //Categorias
   // Extract categoria data from query
-  const categories = result.data.categoriesGroup.group
+  const categories = result.data.categoriesGroup.group;
   // Make categoria pages
-  categories.forEach(categoria => {
+  categories.forEach((categoria) => {
     createPage({
       path: `/categories/${_.kebabCase(categoria.fieldValue)}/`,
       component: categTemplate,
       context: {
         categoria: categoria.fieldValue,
       },
-    })
-  })
-}
+    });
+  });
+};

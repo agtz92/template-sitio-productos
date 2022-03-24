@@ -27,7 +27,7 @@
 .navlink-contrast {
   margin-top: 20px;
   font-family: Exo, sans-serif;
-  color: #fff;
+  color: #fff!important;
   font-weight: 500;
 }
 

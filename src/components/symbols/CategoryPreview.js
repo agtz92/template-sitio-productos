@@ -15,7 +15,7 @@ const CategoryPreview = (props) => {
       <GatsbyImage image={props.image} alt={props.alt} />
       <div className="div-category-title-wrapper">
         <h1 className="text-big white">{props.title}</h1>
-        <Link className="button-regular w-button bck-color1" to={`/categories/${kebabCase(props.title)}/`}>Ir</Link>
+        <Link className="button-regular w-button bck-color1" to={`/categories/${kebabCase(props.title)}/`}>Ver Todos Los Productos</Link>
       </div>
     </div>
   );

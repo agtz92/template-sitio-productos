@@ -22,7 +22,7 @@ const Categorias = ({data}) => {
               <ProductPreview
                 key={node.id}
                 text={node.frontmatter.short_description}
-                title={node.frontmatter.categoria}
+                title={node.frontmatter.title}
                 img={getImage(node.frontmatter.prodimage)}
                 alt={node.frontmatter.title}
                 link ={node.fields.slug}
