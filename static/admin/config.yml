@@ -20,7 +20,7 @@ collections:
       - { name: short-description, label: Descripcion Corta, widget: markdown, hint: Descripcion corta de cada producto para fines de SEO, required: true}
       - { name: prod-desc, label: Descripción larga del producto, widget: markdown }
       - { name: specs, label: Especificaciones técnicas del producto, widget: markdown }
-      - { collection: sizes, valueField: sizes, searchFields: ["sizes"], displayFields: ["sizes"], widget: relation, name: sizes, label: Medidas del producto, required: true, multiple: false, hint: Poner medidas del producto}
+      - { collection: medidas, valueField: sizes, searchFields: ["name"], displayFields: ["name"], widget: relation, name: sizes, label: Medidas del producto, required: false, multiple: false, hint: Poner medidas del producto}
 
  
   - name: categoria
