@@ -32,7 +32,7 @@ collections:
       - {widget: string, name: categoria, label: Categoria, required: true, hint: Categoría del producto ej. Piso deportivo, Neopreno en Rollo, Vialidades }
       - {label: "Imagen de la Categoria", name: "categoryimage", widget: image}
 
-  - name: sizes
+  - name: medidas
     identifier_field: name
     title: name
     label: Medidas
