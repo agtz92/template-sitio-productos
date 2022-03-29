@@ -14,6 +14,7 @@ import Div5050 from "../components/wrappers/Div5050";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
 import CategoryPreview from "../components/symbols/CategoryPreview";
+import LandingSection from "../components/symbols/LandingSection";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -26,12 +27,19 @@ const IndexPage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Fade>
-          <Cards
-            title="Cards Component"
-            subtitle="Dummy Subtitle"
-            text={smallDescriptionDummy}
-          />
+        <LandingSection>
+        <FeatureCard
+          title="Feature Card Component"
+          bigtitle="Dummy Big Title"
+          text={smallDescriptionDummy}
+          card1Title="Card 1 Title"
+          card2Title="Card 2 Title"
+          card1Text={smallDescriptionDummy}
+          card2Text={smallDescriptionDummy}
+        />
+        </LandingSection>
         </Fade>
+        
         <SimpleCard
           title="Simple Card Component"
           text={smallDescriptionDummy}
