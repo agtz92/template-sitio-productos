@@ -13,6 +13,8 @@ import showdown from "showdown";
 import Container from "../components/wrappers/Container";
 import HalfHalf from "../components/wrappers/HalfHalf";
 import Heading from "../components/symbols/Heading";
+import LandingSection from "../components/symbols/LandingSection";
+import ContactForm from "../components/symbols/ContactForm";
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
@@ -63,6 +65,9 @@ const BlogPost = ({ data }) => {
               />
             }
           /></Container>
+          <LandingSection>
+          <ContactForm darkmodetext></ContactForm>
+        </LandingSection>
       
     </Layout>
   );
