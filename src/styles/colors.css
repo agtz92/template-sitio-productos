@@ -33,7 +33,14 @@
     color: #fff!important;
     background-color: #161925!important;
 }
+.darkmode-text{
+    color: #fff!important;
+}
 
 .bck-color-white{
     background-color: #fff;
+}
+
+.text-black{
+    color:#000;
 }

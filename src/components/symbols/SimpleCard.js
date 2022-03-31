@@ -3,7 +3,7 @@ import "../../webflow_styles/symbols/simplecard.css"
 
 const SimpleCard = (props) => {
   return (
-    <div className={`about-us-card bck-color-white ${props.margin ? "margin-right" : ""}`}>
+    <div className={`about-us-card bck-color-white ${props.margin ? "margin-right" : ""} ${props.darkmode ? " darkmode" : ""} ${props.darkmodetext ? " darkmode-text" : ""}`}>
       <div className="label-titles color1">{props.title}</div>
       <p className="paragraph-regular">
         {props.text}
@@ -11,4 +11,4 @@ const SimpleCard = (props) => {
     </div>
   );
 };
-export default SimpleCard;
+export default SimpleCard; 

@@ -6,24 +6,27 @@
   margin-bottom: 20px;
 }
 
+.spacing {
+  margin: 40px 20px;
+}
+
 .div-cards.white {
   background-color: #f1f1f1;
 }
 
 .div-cards.black {
   background-color: #161925;
-  color:#FFFFFF;
+  color: #ffffff;
 }
 
 .div-cards.transparent {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
+  color: #000;
 }
 
 .div-cards.padding {
   padding: 20px;
 }
-
-
 
 .div-number-circle {
   display: -webkit-box;
@@ -71,4 +74,10 @@
 
 .paragraph-regular.margin {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .spacing {
+    margin: 20px 20px;
+  }
 }

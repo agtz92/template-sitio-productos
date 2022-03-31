@@ -1,15 +1,14 @@
 import React from "react";
-import { GatsbyImage} from "gatsby-plugin-image";
+import { StaticImage} from "gatsby-plugin-image";
 //dedicated css
 import "../../webflow_styles/symbols/cards.css";
 
-import img from "../../images/Webp.net-resizeimage-min.jpg";
 
 const Cards = (props) => {
   return (
-    <div className={`div-cards white padding ${props.margin ? "margin-bottom" : ""} ${props.black ? " black" : ""} ${props.transparent ? " transparent" : ""}`}>
+    <div className={`div-cards white padding ${props.spacing ? "spacing" : ""} ${props.margin ? " margin-bottom" : ""} ${props.black ? " black" : ""} ${props.transparent ? " transparent" : ""} ${props.darkmode ? " darkmode" : ""} ${props.darkmodetext ? " darkmode-text" : ""}`}>
       
-      {props.image ? <div className="div-number-circle"><GatsbyImage image={props.image} alt={props.alt} /></div> : ""}
+      {props.image ? <div className="div-number-circle"><StaticImage image={props.image} alt={props.alt} /></div> : ""}
       
       <div className="cards-title color1">
         {props.title}

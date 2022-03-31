@@ -1,7 +1,7 @@
 .div-category-preview {
     position: relative;
     width: auto;
-    min-height: 40vh;
+    min-height: 30vh;
   }
 
 
@@ -51,7 +51,7 @@
   
   .text-big {
     font-family: Exo, sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     line-height: 1em;
     font-weight: 500;
   }
@@ -67,6 +67,6 @@
   
   @media screen and (max-width: 767px) {
     .text-big {
-      font-size: 1em;
+      font-size: 1.5em;
     }
   }

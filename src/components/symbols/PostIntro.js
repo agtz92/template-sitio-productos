@@ -5,14 +5,12 @@ import Container from "../wrappers/Container";
 
 const PostIntro = (props) => {
   return (
-    <Container
-      content={
-        <React.Fragment>
-          <GatsbyImage image={props.image} alt={props.alt} className="image" />
-          <p className="paragraph">{props.text}</p>
-        </React.Fragment>
-      }
-    />
+    <Container>
+      <React.Fragment>
+        <GatsbyImage image={props.image} alt={props.alt} className="image" />
+        <p className="paragraph">{props.text}</p>
+      </React.Fragment>
+    </Container>
   );
 };
 

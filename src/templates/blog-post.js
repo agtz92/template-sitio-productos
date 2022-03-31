@@ -11,37 +11,34 @@ import PostIntro from "../components/symbols/PostIntro";
 //Post processing
 import showdown from "showdown";
 import Container from "../components/wrappers/Container";
-import Div5050 from "../components/wrappers/Div5050";
 import HalfHalf from "../components/wrappers/HalfHalf";
+import Heading from "../components/symbols/Heading";
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
   const post = data.markdownRemark;
   return (
     <Layout>
-      <Container margin content={<h1>{post.frontmatter.title}</h1>} />
+      <Container margin>
+        <Heading h1 alignment="center" color="color1" >{post.frontmatter.title}</Heading>
+      </Container>
 
       <PostIntro
         text={post.frontmatter.short_description}
         image={getImage(post.frontmatter.prodimage)}
         alt={post.frontmatter.title}
       />
-      <Container
-        margin
-        content={
-          <div
-            className="div-text-post"
-            dangerouslySetInnerHTML={{
-              __html: converter.makeHtml(post.frontmatter.prod_desc),
-            }}
-          />
-        }
-      />
 
-      <Container
-        margin
-        content={
-          <HalfHalf
+      <Container margin>
+        <div
+          className="div-text-post"
+          dangerouslySetInnerHTML={{
+            __html: converter.makeHtml(post.frontmatter.prod_desc),
+          }}
+        />
+      </Container>
+
+      <Container margin><HalfHalf
             left={
               <React.Fragment>
                 <div
@@ -65,9 +62,8 @@ const BlogPost = ({ data }) => {
                 }
               />
             }
-          />
-        }
-      />
+          /></Container>
+      
     </Layout>
   );
 };

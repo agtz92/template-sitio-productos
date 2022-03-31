@@ -11,10 +11,12 @@ import Layout from "../components/layouts/Layout";
 import FeatureCard from "../components/symbols/FeatureCard";
 import NewsPreviewBig from "../components/symbols/NewsPreviewBig";
 import Div5050 from "../components/wrappers/Div5050";
-import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
 import CategoryPreview from "../components/symbols/CategoryPreview";
 import LandingSection from "../components/symbols/LandingSection";
+import ContactForm from "../components/symbols/ContactForm";
+import Heading from "../components/symbols/Heading";
+import HalfHalf from "../components/wrappers/HalfHalf";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -27,19 +29,87 @@ const IndexPage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Fade>
-        <LandingSection>
-        <FeatureCard
-          title="Feature Card Component"
-          bigtitle="Dummy Big Title"
-          text={smallDescriptionDummy}
-          card1Title="Card 1 Title"
-          card2Title="Card 2 Title"
-          card1Text={smallDescriptionDummy}
-          card2Text={smallDescriptionDummy}
-        />
-        </LandingSection>
+          <LandingSection>
+            <FeatureCard
+              darkmodetext
+              title="Feature Card Component"
+              bigtitle="Dummy Big Title"
+              text={smallDescriptionDummy}
+              card1Title="Card 1 Title"
+              card2Title="Card 2 Title"
+              card1Text={smallDescriptionDummy}
+              card2Text={smallDescriptionDummy}
+            />
+          </LandingSection>
         </Fade>
-        
+        <Heading h2 alignment="center" color="color1">
+          Categorías de Productos
+        </Heading>
+        <Grid3x3
+          products={
+            <Fade cascade damping={0.3}>
+              {edges.map(({ node }) => (
+                <CategoryPreview
+                  key={node.id}
+                  title={node.frontmatter.categoria}
+                  image={getImage(node.frontmatter.categoryimage)}
+                  alt={node.frontmatter}
+                  color="darkmode-text"
+                />
+              ))}
+            </Fade>
+          }
+        />
+
+        <div style={{ margin: "0px 60px 0px 60px" }}>
+          <HalfHalf
+            left={
+              <HalfHalf
+                left={
+                  <Cards
+                    spacing
+                    title="Excelencia en Calidad"
+                    subtitle="Dummy Subtitle"
+                    text={smallDescriptionDummy}
+                  />
+                }
+                right={
+                  <Cards
+                    spacing
+                    title="Existencias Inmediatas"
+                    subtitle="Dummy Subtitle"
+                    text={smallDescriptionDummy}
+                  />
+                }
+              />
+            }
+            right={
+              <HalfHalf
+                left={
+                  <Cards
+                    spacing
+                    title="Envíos a todo el país"
+                    subtitle="Dummy Subtitle"
+                    text={smallDescriptionDummy}
+                  />
+                }
+                right={
+                  <Cards
+                    spacing
+                    title="Mejores Precios"
+                    subtitle="Dummy Subtitle"
+                    text={smallDescriptionDummy}
+                  />
+                }
+              />
+            }
+          />
+        </div>
+
+        <LandingSection>
+          <ContactForm darkmodetext></ContactForm>
+        </LandingSection>
+
         <SimpleCard
           title="Simple Card Component"
           text={smallDescriptionDummy}
@@ -74,7 +144,7 @@ const IndexPage = ({ data }) => {
             </React.Fragment>
           }
         />
-        
+
         <Div5050
           left={
             <React.Fragment>
@@ -179,6 +249,9 @@ const IndexPage = ({ data }) => {
             </React.Fragment>
           }
         />
+        <LandingSection>
+          <ContactForm darkmodetext></ContactForm>
+        </LandingSection>
       </Layout>
     </React.Fragment>
   );
@@ -196,7 +269,7 @@ export const pageQuery = graphql`
           frontmatter {
             categoryimage {
               childImageSharp {
-                gatsbyImageData(aspectRatio: 0.5)
+                gatsbyImageData(aspectRatio: 0.8)
               }
             }
             categoria

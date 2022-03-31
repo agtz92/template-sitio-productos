@@ -1,0 +1,13 @@
+h1, h2, h3, h4{
+    width: 100%;
+    font-family: Exo, sans-serif;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.right{
+    text-align: right;
+}

@@ -8,7 +8,7 @@ import SimpleCard from "./SimpleCard";
 const FeatureCard = (props) => {
   return (
     <section id="feature-section" className="abotus ">
-      <div className="flex-container-2 w-container">
+      <div className={`flex-container-2 w-container ${props.darkmode ? " darkmode" : ""} ${props.darkmodetext ? " darkmode-text" : ""}`}>
         <div className="feature-image-mask-2">
           <div className="decor-image bck-color1"></div>
           <img
