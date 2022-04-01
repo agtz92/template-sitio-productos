@@ -16,6 +16,7 @@ import Heading from "../components/symbols/Heading";
 import LandingSection from "../components/symbols/LandingSection";
 import ContactForm from "../components/symbols/ContactForm";
 
+
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
   const post = data.markdownRemark;

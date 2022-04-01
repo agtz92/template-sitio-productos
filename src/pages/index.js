@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Fade>
-          <LandingSection>
+          <LandingSection >
             <FeatureCard
               darkmodetext
               title="Feature Card Component"
