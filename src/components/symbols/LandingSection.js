@@ -6,7 +6,7 @@ const LandingSection = ({ children }) => {
   return (
     <div className="landing-wrapper cc-store-home-wrap">
       <div className="intro-header">
-      <StaticImage className="image-background" src="../../../public/assets/bckimg.jpg" alt="background image" />
+      <StaticImage className="image-background" src="../../images/bckimg.jpg" alt="background image" />
         
         <div className="black-overlay"></div>
         <div className="children">{children}</div>
