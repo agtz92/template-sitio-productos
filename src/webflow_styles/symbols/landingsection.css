@@ -38,7 +38,7 @@
   }
   
   .image-background {
-    position: absolute;
+    position: absolute!important;
     -o-object-fit: cover;
     object-fit: cover;
     z-index:0;
