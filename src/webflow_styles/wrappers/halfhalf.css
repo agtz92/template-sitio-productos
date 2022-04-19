@@ -8,6 +8,10 @@
   ._5050div {
     width: 50%;
   }
+
+.padding{
+  padding: 150px;
+}
   
   @media screen and (max-width: 767px) {
     ._5050wrapper {
@@ -28,5 +32,9 @@
   
     ._5050div {
       width: 100%;
+    }
+
+    .padding{
+      padding: 40px;
     }
   }

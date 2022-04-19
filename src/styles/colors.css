@@ -1,32 +1,35 @@
 .color1{
-    color:#0065a9!important;
+    color:#3F37C9!important;
 }
 .color2{
-    color:#41bfff!important;
+    color:#4361EE!important;
 }
 .color3{
-    color:#003254!important;
+    color:#F72585!important;
 }
 .color4{
-    color:#000!important;
+    color:#480CA8!important;
 }
 .color5{
-    color:#fefe00!important;
+    color:#4CC9F0!important;
+}
+.color-white{
+    color: #fff !important;
 }
 .bck-color1{
-    background-color:#0065a9!important;
+    background-color:#3F37C9!important;
 }
 .bck-color2{
-    background-color:#41bfff!important;
+    background-color:#4361EE!important;
 }
 .bck-color3{
-    background-color:#003254!important;
+    background-color:#F72585!important;
 }
 .bck-color4{
-    background-color:#000!important;
+    background-color:#480CA8!important;
 }
 .bck-color5{
-    background-color:#fefe00!important;
+    background-color:#4CC9F0!important;
 }
 
 .darkmode{

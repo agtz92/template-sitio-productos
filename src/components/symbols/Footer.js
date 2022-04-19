@@ -6,7 +6,7 @@ import img from "../../images/Webp.net-resizeimage-min.jpg";
 
 const Footer = () => {
   return (
-    <footer id="footer" className="footer wf-section bck-color4">
+    <footer id="footer" className="footer wf-section darkmode">
       <div className="w-container">
         <div className="footer-flex-container">
           <div className="div-block-2">

@@ -13,7 +13,7 @@ const Cards = (props) => {
       <div className="cards-title color1">
         {props.title}
       </div>
-      <div className="label-titles color2">{props.subtitle}</div>
+      <div className="label-titles color3">{props.subtitle}</div>
       <p className="paragraph-regular margin">
         {props.text}
       </p>

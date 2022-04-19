@@ -17,6 +17,7 @@ import LandingSection from "../components/symbols/LandingSection";
 import ContactForm from "../components/symbols/ContactForm";
 import Heading from "../components/symbols/Heading";
 import HalfHalf from "../components/wrappers/HalfHalf";
+import LandingSection2 from "../components/symbols/LandingSection2";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -29,18 +30,7 @@ const IndexPage = ({ data }) => {
     <React.Fragment>
       <Layout>
         <Fade>
-          <LandingSection >
-            <FeatureCard
-              darkmodetext
-              title="Feature Card Component"
-              bigtitle="Dummy Big Title"
-              text={smallDescriptionDummy}
-              card1Title="Card 1 Title"
-              card2Title="Card 2 Title"
-              card1Text={smallDescriptionDummy}
-              card2Text={smallDescriptionDummy}
-            />
-          </LandingSection>
+          <LandingSection2 />
         </Fade>
         <Heading h2 alignment="center" color="color1">
           Categorías de Productos
@@ -105,15 +95,7 @@ const IndexPage = ({ data }) => {
             }
           />
         </div>
-
-        <LandingSection>
-          <ContactForm darkmodetext></ContactForm>
-        </LandingSection>
-
-        <SimpleCard
-          title="Simple Card Component"
-          text={smallDescriptionDummy}
-        />
+        
         <FeatureCard
           title="Feature Card Component"
           bigtitle="Dummy Big Title"
@@ -123,6 +105,16 @@ const IndexPage = ({ data }) => {
           card1Text={smallDescriptionDummy}
           card2Text={smallDescriptionDummy}
         />
+
+        <LandingSection>
+          <ContactForm darkmodetext></ContactForm>
+        </LandingSection>
+
+        <SimpleCard
+          title="Simple Card Component"
+          text={smallDescriptionDummy}
+        />
+
         <NewsPreviewBig
           title="NewsPreviewsBig Component"
           categ="Packing"

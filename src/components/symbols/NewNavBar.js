@@ -17,7 +17,7 @@ const NewNavBar = (props) =>{
         data-easing="ease"
         data-easing2="ease"
         role="banner"
-        className={`navbar w-nav${props.sticky ? " sticky" : ""}`}
+        className={`navbar bck-color4  w-nav${props.sticky ? " sticky" : ""}`}
       >
         <div className="container-3 w-container">
           <Link to="/" className="w-nav-brand">
@@ -28,21 +28,22 @@ const NewNavBar = (props) =>{
               alt=""
               style={{ width: "70px", height: "45px", paddingTop: "5px" }}
             />
+            <p className="color-white paragraph-regular">de MatMarkt</p>
           </Link>
           <nav role="navigation" className="nav-menu w-nav-menu">
-            <Link to="/" className="navlink w-nav-link" activeclassname="w--current color1">
+            <Link to="/" className="navlink w-nav-link color-white" activeclassname="w--current color1">
               Inicio
             </Link>
-            <Link to="/categorias/" className="navlink w-nav-link" activeclassname="w--current color1">
+            <Link to="/categorias/" className="navlink w-nav-link color-white" activeclassname="w--current color1">
               Productos
             </Link>
-            <a href="#" className="navlink w-nav-link" activeclassname="w--current color1">
+            <a href="#" className="navlink w-nav-link color-white" activeclassname="w--current color1">
               Acerca de Nosotros
             </a>
-            <a href="#" className="navlink w-nav-link" activeclassname="w--current color1">
+            <a href="#" className="navlink w-nav-link color-white" activeclassname="w--current color1">
               Contactanos
             </a>
-            <a href="#" className="navlink-contrast bck-color1 w-nav-link" activeclassname="w--current color1">
+            <a href="#" className="navlink-contrast bck-color1 w-nav-link " activeclassname="w--current color1">
               Cotiza Ahora
             </a>
           </nav>
@@ -65,35 +66,35 @@ const NewNavBar = (props) =>{
         >
           <nav
             role="navigation"
-            className="nav-menu w-nav-menu transition"
+            className="nav-menu w-nav-menu transition darkmode"
             data-nav-menu-open=""
 
           >
             <Link
               to="/"
               aria-current="page"
-              className="navlink w-nav-link w--nav-link-open"
+              className="navlink w-nav-link w--nav-link-open color-white"
               activeclassname="w--current color1"
             >
               Inicio
             </Link>
             <Link
               to="/categorias/"
-              className="navlink w-nav-link w--nav-link-open"
+              className="navlink w-nav-link w--nav-link-open color-white"
               activeclassname="w--current color1"
             >
               Productos
             </Link>
             <a
               href="/about-us"
-              className="navlink w-nav-link w--nav-link-open"
+              className="navlink w-nav-link w--nav-link-open color-white"
               activeclassname="w--current color1"
             >
               Acerca de Nosotros
             </a>
             <a
               href="/contact-us"
-              className="navlink w-nav-link w--nav-link-open"
+              className="navlink w-nav-link w--nav-link-open color-white"
               activeclassname="w--current color1"
             >
               Contactanos
