@@ -3,16 +3,12 @@ import HalfHalf from "../wrappers/HalfHalf";
 import Heading from "./Heading";
 import PercentageDiv from "./PercentageDiv";
 import { StaticImage } from "gatsby-plugin-image";
-import background from "../../images/artworkbck.jpg";
+//import background from "../../images/artworkbck.jpg";
 
 const LandingSection2 = (props) => {
   return (
     <div
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
+      
     >
       <HalfHalf
         left={
@@ -29,17 +25,17 @@ const LandingSection2 = (props) => {
                 src="../../images/logo.png"
                 alt="background image"
               />
-            <Heading h1 size="huge">
+            <Heading h1 extraclass="darkmode-text" size="huge">
               LOS MEJORES PISOS
               <br /> PARA GIMNASIO
             </Heading>
-            <Heading h2 color="color1" size="big">
+            <Heading h2 color="color5" size="big">
               Renueva tu gimnasio y atrae más clientes
             </Heading>
-            <p className="paragraph-regular">
+            <p className="paragraph-regular darkmode-text">
               Somos fabricantes y distribuidores con más de 37 años de experiencia en venta y distribución a toda la República Mexicana
             </p>
-            <button className="button-regular w-button bck-color1">
+            <button className="button-regular w-button darkmode ">
               Cotiza Ahora
             </button>
           </PercentageDiv>

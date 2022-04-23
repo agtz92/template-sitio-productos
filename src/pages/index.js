@@ -18,39 +18,43 @@ import ContactForm from "../components/symbols/ContactForm";
 import Heading from "../components/symbols/Heading";
 import HalfHalf from "../components/wrappers/HalfHalf";
 import LandingSection2 from "../components/symbols/LandingSection2";
+import background from "../images/artworkbck.jpg";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
 const timeElapsed = Date.now();
 const today = new Date(timeElapsed);
+
 // markup
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <React.Fragment>
       <Layout>
-        <Fade>
-          <LandingSection2 />
-        </Fade>
-        <Heading h2 alignment="center" color="color1">
-          Categorías de Productos
-        </Heading>
-        <Grid3x3
-          products={
-            <Fade cascade damping={0.3}>
-              {edges.map(({ node }) => (
-                <CategoryPreview
-                  key={node.id}
-                  title={node.frontmatter.categoria}
-                  image={getImage(node.frontmatter.categoryimage)}
-                  alt={node.frontmatter}
-                  color="darkmode-text"
-                />
-              ))}
-            </Fade>
-          }
-        />
-
+        <div className="pattern-background">
+          <Fade>
+            <LandingSection2 />
+          </Fade>
+          </div>
+          <Heading h2 alignment="center" color="color1">
+            Categorías de Productos
+          </Heading>
+          <Grid3x3
+            products={
+              <Fade cascade damping={0.3}>
+                {edges.map(({ node }) => (
+                  <CategoryPreview
+                    key={node.id}
+                    title={node.frontmatter.categoria}
+                    image={getImage(node.frontmatter.categoryimage)}
+                    alt={node.frontmatter}
+                    color="darkmode-text"
+                  />
+                ))}
+              </Fade>
+            }
+          />
+        
         <div style={{ margin: "0px 60px 0px 60px" }}>
           <HalfHalf
             left={
@@ -58,16 +62,16 @@ const IndexPage = ({ data }) => {
                 left={
                   <Cards
                     spacing
+                    medal
                     title="Excelencia en Calidad"
-                    subtitle="Dummy Subtitle"
                     text={smallDescriptionDummy}
                   />
                 }
                 right={
                   <Cards
                     spacing
+                    store
                     title="Existencias Inmediatas"
-                    subtitle="Dummy Subtitle"
                     text={smallDescriptionDummy}
                   />
                 }
@@ -79,7 +83,7 @@ const IndexPage = ({ data }) => {
                   <Cards
                     spacing
                     title="Envíos a todo el país"
-                    subtitle="Dummy Subtitle"
+                    shipping
                     text={smallDescriptionDummy}
                   />
                 }
@@ -87,7 +91,7 @@ const IndexPage = ({ data }) => {
                   <Cards
                     spacing
                     title="Mejores Precios"
-                    subtitle="Dummy Subtitle"
+                    money
                     text={smallDescriptionDummy}
                   />
                 }
@@ -95,7 +99,7 @@ const IndexPage = ({ data }) => {
             }
           />
         </div>
-        
+
         <FeatureCard
           title="Feature Card Component"
           bigtitle="Dummy Big Title"

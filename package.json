@@ -17,7 +17,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@react-icons/all-files": "^4.1.0",
     "gatsby": "^4.10.0",
+    "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-google-analytics": "^4.10.0",
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-mdx": "^3.10.0",
@@ -37,5 +39,6 @@
     "react-helmet": "^6.1.0",
     "react-image-gallery": "^1.2.7",
     "showdown": "^2.0.3"
-  }
+  },
+  "devDependencies": {}
 }

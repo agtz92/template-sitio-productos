@@ -1,22 +1,28 @@
 import React from "react";
 //dedicated css
 import "../../webflow_styles/symbols/featurecard.css";
-
-import img from "../../images/Webp.net-resizeimage-min.jpg";
+import { StaticImage } from "gatsby-plugin-image";
+import img from "../../images/gym_mats.jpg";
 import SimpleCard from "./SimpleCard";
 
 const FeatureCard = (props) => {
   return (
     <section id="feature-section" className="abotus ">
-      <div className={`flex-container-2 w-container ${props.darkmode ? " darkmode" : ""} ${props.darkmodetext ? " darkmode-text" : ""}`}>
+      <div
+        className={`flex-container-2 w-container ${
+          props.darkmode ? " darkmode" : ""
+        } ${props.darkmodetext ? " darkmode-text" : ""}`}
+      >
         <div className="feature-image-mask-2">
           <div className="decor-image bck-color1"></div>
-          <img
-            srcSet={img}
-            loading="lazy"
-            alt="whoweare_socal"
-            className="feature-image-2"
-          />
+          <div className="feature-image-2">
+            <StaticImage
+              placeholder="blurred"
+              aspectRatio={.8}
+              src="../../images/gym_mats.jpg"
+              alt="MatMarkt"
+            />
+          </div>
         </div>
         <div className="about-us-top">
           <div className="label-titles color2">{props.title}</div>

@@ -1,11 +1,9 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import {getImage } from "gatsby-plugin-image";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layouts/Layout";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
-import CategoryPreview from "../components/symbols/CategoryPreview";
 //Generic Styles
 import "../webflow_styles/normalize.css";
 import "../webflow_styles/webflow.css";
