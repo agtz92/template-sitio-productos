@@ -55,6 +55,16 @@ exports.createPages = async ({ graphql, actions }) => {
                   gatsbyImageData(aspectRatio: 0.5)
                 }
               }
+              prodimage1 {
+                childrenImageSharp {
+                  gatsbyImageData(aspectRatio: 0.5)
+                }
+              }
+              prodimage2 {
+                childrenImageSharp {
+                  gatsbyImageData(aspectRatio: 0.5)
+                }
+              }
             }
           }
         }
