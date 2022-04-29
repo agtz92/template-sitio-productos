@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@netlify/plugin-gatsby": "^3.0.0",
     "@react-icons/all-files": "^4.1.0",
     "gatsby": "^4.13.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
