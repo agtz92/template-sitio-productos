@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layouts/Layout";
@@ -15,12 +15,16 @@ import HalfHalf from "../components/wrappers/HalfHalf";
 import Heading from "../components/symbols/Heading";
 import LandingSection from "../components/symbols/LandingSection";
 import ContactForm from "../components/symbols/ContactForm";
+import ImgThumbs from "../components/wrappers/ImgThumbs";
 
 import PercentageDiv from "../components/symbols/PercentageDiv";
 import { StaticImage } from "gatsby-plugin-image";
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
+  const IMG_SELECTOR = [0, 1, 2];
+  const [imageSelection, setImageSelection] = useState(IMG_SELECTOR[0]);
+
   const post = data.markdownRemark;
   return (
     <Layout>
@@ -68,45 +72,27 @@ const BlogPost = ({ data }) => {
                   alt={post.frontmatter.title}
                 />
                 <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      width: "100px",
-                      paddingTop: "10px",
-                      paddingRight: "10px",
-                    }}
-                  >
+                  <ImgThumbs onClick={() => setImageSelection(IMG_SELECTOR[0])}>
                     <GatsbyImage
                       image={getImage(post.frontmatter.prodimage)}
                       alt={post.frontmatter.title}
                       width="50"
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "100px",
-                      paddingTop: "10px",
-                      paddingRight: "10px",
-                    }}
-                  >
+                  </ImgThumbs>
+                  <ImgThumbs onClick={() => setImageSelection(IMG_SELECTOR[1])}>
                     <GatsbyImage
                       image={getImage(post.frontmatter.prodimage)}
                       alt={post.frontmatter.title}
                       width="50"
                     />
-                  </div>
-                  <div
-                    style={{
-                      width: "100px",
-                      paddingTop: "10px",
-                      paddingRight: "10px",
-                    }}
-                  >
+                  </ImgThumbs>
+                  <ImgThumbs onClick={() => setImageSelection(IMG_SELECTOR[2])}>
                     <GatsbyImage
                       image={getImage(post.frontmatter.prodimage)}
                       alt={post.frontmatter.title}
                       width="50"
                     />
-                  </div>
+                  </ImgThumbs>
                 </div>
               </div>
             </PercentageDiv>
