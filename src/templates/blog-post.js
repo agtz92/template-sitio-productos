@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layouts/Layout";
-import { Fade } from "react-awesome-reveal";
 
 //Generic Styles
 import "../webflow_styles/normalize.css";
@@ -16,7 +15,6 @@ import HalfHalf from "../components/wrappers/HalfHalf";
 import Heading from "../components/symbols/Heading";
 import LandingSection from "../components/symbols/LandingSection";
 import ContactForm from "../components/symbols/ContactForm";
-import ImgThumbs from "../components/wrappers/ImgThumbs";
 
 import PercentageDiv from "../components/symbols/PercentageDiv";
 import { StaticImage } from "gatsby-plugin-image";
@@ -76,7 +74,7 @@ const BlogPost = ({ data }) => {
               <StaticImage
                 placeholder="blurred"
                 width={120}
-                src="../../images/logo.png"
+                src="../images/logo.png"
                 alt="background image"
               />
               <Heading h1 size="huge darkmode-text">
@@ -104,7 +102,7 @@ const BlogPost = ({ data }) => {
               <div className="offsetimage">
                 {mainImg}
                 <div  style={{ display: "flex" }}>
-                  <div onClick={() => setImageSelection(IMG_SELECTOR[0])}
+                  <div role = "button" onClick={() => setImageSelection(IMG_SELECTOR[0])} onKeyDown={() => setImageSelection(IMG_SELECTOR[0])}
                     style={{
                       width: "100px",
                       paddingTop: "10px",
@@ -117,7 +115,7 @@ const BlogPost = ({ data }) => {
                       width="50"
                     />
                   </div>
-                  <div onClick={() => setImageSelection(IMG_SELECTOR[1])}
+                  <div role = "button" onClick={() => setImageSelection(IMG_SELECTOR[1])} onKeyDown={() => setImageSelection(IMG_SELECTOR[1])}
                     style={{
                       width: "100px",
                       paddingTop: "10px",
@@ -130,7 +128,7 @@ const BlogPost = ({ data }) => {
                       width="50"
                     />
                   </div>
-                  <div onClick={() => setImageSelection(IMG_SELECTOR[2])}
+                  <div role = "button" onClick={() => setImageSelection(IMG_SELECTOR[2])} onKeyDown={() => setImageSelection(IMG_SELECTOR[2])}
                     style={{
                       width: "100px",
                       paddingTop: "10px",
