@@ -1,8 +1,8 @@
 ---
 title: Neopreno en Placa
 prodimage: ../../static/assets/webp.net-resizeimage-min.jpg
-prodimage1: ../../static/assets/webp.net-resizeimage-min.jpg
-prodimage2: ../../static/assets/webp.net-resizeimage-min.jpg
+prodimage2: static/7-bird-colorful-peacock-wallpaper-preview.jpg
+prodimage3: static/bckimg.jpg
 categoria: Hule y Neopreno En Rollo
 tags:
   - neopreno
@@ -18,6 +18,7 @@ prod-desc: Neoprene rolls are a popular choice among industrial users because of
   most chemicals, making it a reliable choice for use in environments where
   hazardous materials are present. neoprene rolls are available in a variety of
   sizes to meet the needs of any user.
+prodimage1: ../../static/assets/webp.net-resizeimage-min.jpg
 specs: Neoprene rolls are a popular choice among industrial users because of
   their well-balanced properties. The neoprene sheet can resist temperatures up
   to 280º F and has good stickiness to metals, making it ideal for use in a
