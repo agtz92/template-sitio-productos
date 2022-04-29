@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layouts/Layout";
+import { Fade } from "react-awesome-reveal";
 
 //Generic Styles
 import "../webflow_styles/normalize.css";
@@ -22,10 +23,44 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
-  const IMG_SELECTOR = [0, 1, 2];
-  const [imageSelection, setImageSelection] = useState(IMG_SELECTOR[0]);
-
   const post = data.markdownRemark;
+  const IMG_SELECTOR = [0, 1, 2];
+  let mainImg;
+  const [imageSelection, setImageSelection] = useState(IMG_SELECTOR[0]);
+  if (imageSelection === IMG_SELECTOR[0]) {
+    mainImg = (
+      <GatsbyImage
+        image={getImage(post.frontmatter.prodimage)}
+        alt={post.frontmatter.title}
+      />
+    );
+    console.log("IMG 1");
+  } else if (imageSelection === IMG_SELECTOR[1]) {
+    mainImg = (
+      
+      <GatsbyImage
+        image={getImage(post.frontmatter.prodimage1)}
+        alt={post.frontmatter.title}
+      />
+    );
+    console.log("IMG 2");
+  } else if (imageSelection === IMG_SELECTOR[2]) {
+    mainImg = (
+      <GatsbyImage
+        image={getImage(post.frontmatter.prodimage2)}
+        alt={post.frontmatter.title}
+      />
+    );
+  } else {
+    mainImg = (
+      <GatsbyImage
+        image={getImage(post.frontmatter.prodimage)}
+        alt={post.frontmatter.title}
+      />
+    );
+    console.log("IMG 3");
+  }
+
   return (
     <Layout>
       <div className="pattern-background">
@@ -67,32 +102,47 @@ const BlogPost = ({ data }) => {
               paddingbottom="120"
             >
               <div className="offsetimage">
-                <GatsbyImage
-                  image={getImage(post.frontmatter.prodimage)}
-                  alt={post.frontmatter.title}
-                />
-                <div style={{ display: "flex" }}>
-                  <ImgThumbs onClick={() => setImageSelection(IMG_SELECTOR[0])}>
+                {mainImg}
+                <div  style={{ display: "flex" }}>
+                  <div onClick={() => setImageSelection(IMG_SELECTOR[0])}
+                    style={{
+                      width: "100px",
+                      paddingTop: "10px",
+                      paddingRight: "10px",
+                    }}
+                  >
                     <GatsbyImage
                       image={getImage(post.frontmatter.prodimage)}
                       alt={post.frontmatter.title}
                       width="50"
                     />
-                  </ImgThumbs>
-                  <ImgThumbs onClick={() => setImageSelection(IMG_SELECTOR[1])}>
+                  </div>
+                  <div onClick={() => setImageSelection(IMG_SELECTOR[1])}
+                    style={{
+                      width: "100px",
+                      paddingTop: "10px",
+                      paddingRight: "10px",
+                    }}
+                  >
                     <GatsbyImage
                       image={getImage(post.frontmatter.prodimage)}
                       alt={post.frontmatter.title}
                       width="50"
                     />
-                  </ImgThumbs>
-                  <ImgThumbs onClick={() => setImageSelection(IMG_SELECTOR[2])}>
+                  </div>
+                  <div onClick={() => setImageSelection(IMG_SELECTOR[2])}
+                    style={{
+                      width: "100px",
+                      paddingTop: "10px",
+                      paddingRight: "10px",
+                    }}
+                  >
                     <GatsbyImage
                       image={getImage(post.frontmatter.prodimage)}
                       alt={post.frontmatter.title}
                       width="50"
                     />
-                  </ImgThumbs>
+                  </div>
                 </div>
               </div>
             </PercentageDiv>
@@ -162,6 +212,7 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 500)
           }
         }
+        
       }
       fields {
         slug
