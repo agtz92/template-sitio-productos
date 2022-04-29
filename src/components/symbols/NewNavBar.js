@@ -44,13 +44,13 @@ const NewNavBar = (props) => {
           >
             Productos
           </Link>
-          <a
-            href="#"
+          <Link
+            to="/nosotros/"
             className="navlink w-nav-link color-white"
             activeclassname="w--current color1"
           >
             Acerca de Nosotros
-          </a>
+          </Link>
           <Link
             to="/contacto/"
             className="navlink w-nav-link color-white"
@@ -102,13 +102,13 @@ const NewNavBar = (props) => {
           >
             Productos
           </Link>
-          <a
-            href="/about-us"
+          <Link
+            to="/nosotros/"
             className="navlink w-nav-link w--nav-link-open color-white"
             activeclassname="w--current color1"
           >
             Acerca de Nosotros
-          </a>
+          </Link>
           <Link
             to="/contacto/"
             className="navlink w-nav-link w--nav-link-open color-white"

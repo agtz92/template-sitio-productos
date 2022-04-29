@@ -1,18 +1,20 @@
 import * as React from "react";
 import {getImage } from "gatsby-plugin-image";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layouts/Layout";
 import ProductPreview from "../components/symbols/ProductPreview";
 import Grid3x3 from "../components/wrappers/Grid3x3";
+import Heading from "../components/symbols/Heading";
 //Generic Styles
 import "../webflow_styles/normalize.css";
 import "../webflow_styles/webflow.css";
 
-const Categorias = ({data}) => {
-  
+const Categorias = ({pageContext, data}) => {
+  const { categoria } = pageContext
 
   return (
     <Layout>
+      <Heading h1 alignment="center" size="huge">{categoria}</Heading>
       <Grid3x3
         products={
           <React.Fragment>

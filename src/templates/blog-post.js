@@ -18,7 +18,6 @@ import ContactForm from "../components/symbols/ContactForm";
 
 import PercentageDiv from "../components/symbols/PercentageDiv";
 import { StaticImage } from "gatsby-plugin-image";
-import background from "../images/artworkbck.jpg";
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
@@ -68,6 +67,47 @@ const BlogPost = ({ data }) => {
                   image={getImage(post.frontmatter.prodimage)}
                   alt={post.frontmatter.title}
                 />
+                <div style={{ display: "flex" }}>
+                  <div
+                    style={{
+                      width: "100px",
+                      paddingTop: "10px",
+                      paddingRight: "10px",
+                    }}
+                  >
+                    <GatsbyImage
+                      image={getImage(post.frontmatter.prodimage)}
+                      alt={post.frontmatter.title}
+                      width="50"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      width: "100px",
+                      paddingTop: "10px",
+                      paddingRight: "10px",
+                    }}
+                  >
+                    <GatsbyImage
+                      image={getImage(post.frontmatter.prodimage)}
+                      alt={post.frontmatter.title}
+                      width="50"
+                    />
+                  </div>
+                  <div
+                    style={{
+                      width: "100px",
+                      paddingTop: "10px",
+                      paddingRight: "10px",
+                    }}
+                  >
+                    <GatsbyImage
+                      image={getImage(post.frontmatter.prodimage)}
+                      alt={post.frontmatter.title}
+                      width="50"
+                    />
+                  </div>
+                </div>
               </div>
             </PercentageDiv>
           }

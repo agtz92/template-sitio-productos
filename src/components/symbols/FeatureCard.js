@@ -2,7 +2,6 @@ import React from "react";
 //dedicated css
 import "../../webflow_styles/symbols/featurecard.css";
 import { StaticImage } from "gatsby-plugin-image";
-import img from "../../images/gym_mats.jpg";
 import SimpleCard from "./SimpleCard";
 
 const FeatureCard = (props) => {

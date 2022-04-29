@@ -18,7 +18,6 @@ import ContactForm from "../components/symbols/ContactForm";
 import Heading from "../components/symbols/Heading";
 import HalfHalf from "../components/wrappers/HalfHalf";
 import LandingSection2 from "../components/symbols/LandingSection2";
-import background from "../images/artworkbck.jpg";
 
 const smallDescriptionDummy =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla";
@@ -101,13 +100,13 @@ const IndexPage = ({ data }) => {
         </div>
 
         <FeatureCard
-          title="Feature Card Component"
-          bigtitle="Dummy Big Title"
-          text={smallDescriptionDummy}
-          card1Title="Card 1 Title"
-          card2Title="Card 2 Title"
-          card1Text={smallDescriptionDummy}
-          card2Text={smallDescriptionDummy}
+          title="¿Quiénes somos?"
+          bigtitle="37 Años de Experiencia"
+          text="En MatMarkt tenemos 37 años de experiencia fabricando y distribuyendo productos de hule industrial para minoristas y mayoristas siempre con la mejor calidad y precio del mercado"
+          card1Title="Fabricantes"
+          card2Title="Distribuidores"
+          card1Text="Somos fabricantes de productos de hule siempre enfocándonos en mejora continua. Podemos manejar desde productos comerciales hasta los requerimientos más específicos de nuestros clientes"
+          card2Text="Distribuimos desde el pedido más pequeño hasta el más grande según tus necesidades. Tenemos envíos gratis* dentro de la ciudad de México y zona metropolitana y también la ciudad de Querétaro. Enviamos a todo el país"
         />
 
         <LandingSection>

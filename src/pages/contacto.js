@@ -3,7 +3,6 @@ import Layout from "../components/layouts/Layout";
 import Cards from "../components/symbols/Cards";
 import ContactForm from "../components/symbols/ContactForm";
 import LandingSection from "../components/symbols/LandingSection";
-import Container from "../components/wrappers/Container";
 import HalfHalf from "../components/wrappers/HalfHalf";
 
 const Contacto = () => {

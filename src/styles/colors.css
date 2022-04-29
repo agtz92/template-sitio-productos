@@ -1,40 +1,49 @@
+:root{
+  --color1:#3f37c9;
+  --color2:#4361ee;
+  --color3:#f72585;
+  --color4:#480ca8 ;
+  --color5:#4cc9f0 ;
+  --colordark:#161925;
+}
+
 .color1 {
-  color: #3f37c9 !important;
+  color: var(--color1) !important;
 }
 .color2 {
-  color: #4361ee !important;
+  color: var(--color2)!important;
 }
 .color3 {
-  color: #f72585 !important;
+  color: var(--color3) !important;
 }
 .color4 {
-  color: #480ca8 !important;
+  color: var(--color4) !important;
 }
 .color5 {
-  color: #4cc9f0 !important;
+  color: var(--color5) !important;
 }
 .color-white {
   color: #fff !important;
 }
 .bck-color1 {
-  background-color: #3f37c9 !important;
+  background-color: var(--color1) !important;
 }
 .bck-color2 {
-  background-color: #4361ee !important;
+  background-color: var(--color2)!important;
 }
 .bck-color3 {
-  background-color: #f72585 !important;
+  background-color: var(--color3)!important;
 }
 .bck-color4 {
-  background-color: #480ca8 !important;
+  background-color: var(--color4)!important;
 }
 .bck-color5 {
-  background-color: #4cc9f0 !important;
+  background-color: var(--color5) !important;
 }
 
 .darkmode {
   color: #fff !important;
-  background-color: #161925 !important;
+  background-color: var(--colordark) !important;
 }
 .darkmode-text {
   color: #fff !important;
@@ -53,8 +62,8 @@
   background-image: 
     linear-gradient(
       to top,
-      #3f37c9,
-      #480ca8
+      var(--color1),
+      var(--color4)
     );
 }
 @media screen and (max-width: 767px) {
@@ -64,8 +73,8 @@
         background-image: 
           linear-gradient(
             to top,
-            #3f37c9,
-            #480ca8
+            var(--color1),
+            var(--color4)
           );
       }
 
