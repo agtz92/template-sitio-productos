@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Layout from "../components/layouts/Layout";
 import Div5050 from "../components/wrappers/Div5050";
 import Cards from "../components/symbols/Cards"
