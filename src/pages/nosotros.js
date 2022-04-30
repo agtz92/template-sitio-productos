@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 import Layout from "../components/layouts/Layout";
 import FeatureCard from "../components/symbols/FeatureCard";
 

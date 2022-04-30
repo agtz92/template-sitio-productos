@@ -1,14 +1,13 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage, StaticImage  } from "gatsby-plugin-image"
-
+import showdown from "showdown"
 //Generic Styles
 import "../webflow_styles/normalize.css"
 import "../webflow_styles/webflow.css"
 import "../webflow_styles/symbols/tables.css"
 import Cards from "../components/symbols/Cards"
 //Post processing
-import showdown from "showdown"
 import Container from "../components/wrappers/Container"
 import HalfHalf from "../components/wrappers/HalfHalf"
 import Heading from "../components/symbols/Heading"
