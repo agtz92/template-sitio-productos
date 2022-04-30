@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Layout from "../components/layouts/Layout";
+
+import { StaticImage } from "gatsby-plugin-image";
 
 //Generic Styles
 import "../webflow_styles/normalize.css";
@@ -15,16 +16,17 @@ import HalfHalf from "../components/wrappers/HalfHalf";
 import Heading from "../components/symbols/Heading";
 import LandingSection from "../components/symbols/LandingSection";
 import ContactForm from "../components/symbols/ContactForm";
-
+import Layout from "../components/layouts/Layout";
 import PercentageDiv from "../components/symbols/PercentageDiv";
-import { StaticImage } from "gatsby-plugin-image";
+
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
   const post = data.markdownRemark;
   const IMG_SELECTOR = [0, 1, 2];
-  let mainImg;
+  let mainImg = IMG_SELECTOR[0];
   const [imageSelection, setImageSelection] = useState(IMG_SELECTOR[0]);
+
   if (imageSelection === IMG_SELECTOR[0]) {
     mainImg = (
       <GatsbyImage

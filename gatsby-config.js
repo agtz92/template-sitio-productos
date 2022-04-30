@@ -92,7 +92,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    `gatsby-plugin-netlify`,
+    "gatsby-plugin-netlify",
     "gatsby-plugin-netlify-cms",
   ],
 };
