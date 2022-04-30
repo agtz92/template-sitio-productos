@@ -1,5 +1,5 @@
-import React from "react";
-import "../../webflow_styles/symbols/landingsection.css";
+import React from "react"
+import "../../webflow_styles/symbols/landingsection.css"
 import { StaticImage } from "gatsby-plugin-image"
 
 const LandingSection = (props) => {

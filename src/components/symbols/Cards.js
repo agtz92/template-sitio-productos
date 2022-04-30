@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 //dedicated css
-import "../../webflow_styles/symbols/cards.css";
-import { FaMedal } from "@react-icons/all-files/fa/FaMedal";
-import { FaShippingFast } from "@react-icons/all-files/fa/FaShippingFast";
-import { FaRegMoneyBillAlt } from "@react-icons/all-files/fa/FaRegMoneyBillAlt";
-import { FaStoreAlt } from "@react-icons/all-files/fa/FaStoreAlt";
+import "../../webflow_styles/symbols/cards.css"
+import { FaMedal } from "@react-icons/all-files/fa/FaMedal"
+import { FaShippingFast } from "@react-icons/all-files/fa/FaShippingFast"
+import { FaRegMoneyBillAlt } from "@react-icons/all-files/fa/FaRegMoneyBillAlt"
+import { FaStoreAlt } from "@react-icons/all-files/fa/FaStoreAlt"
 
 const Cards = (props) => {
   return (

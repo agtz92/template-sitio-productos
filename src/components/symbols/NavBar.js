@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 //dedicated css
-import "../../webflow_styles/symbols/navbar.css";
+import "../../webflow_styles/symbols/navbar.css"
 import { Link } from "gatsby"
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.png"
 
 
 export default class NavBar extends Component {

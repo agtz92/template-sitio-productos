@@ -1,7 +1,7 @@
-import React from "react";
-import { GatsbyImage} from "gatsby-plugin-image";
+import React from "react"
+import { GatsbyImage} from "gatsby-plugin-image"
 import { Link} from "gatsby"
-import "../../webflow_styles/symbols/categorypreview.css";
+import "../../webflow_styles/symbols/categorypreview.css"
 
 import kebabCase from "lodash/kebabCase"
 import Heading from "./Heading";

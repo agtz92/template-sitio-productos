@@ -1,6 +1,6 @@
-import React from "react";
-import { Link} from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react"
+import { Link} from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import "../../webflow_styles/symbols/productpreview.css"
 
 const ProductPreview = (props) => {

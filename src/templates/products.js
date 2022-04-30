@@ -1,10 +1,10 @@
-import React from "react";
-import Layout from "../components/layouts/Layout";
-import Div5050 from "../components/wrappers/Div5050";
+import React from "react"
+import Layout from "../components/layouts/Layout"
+import Div5050 from "../components/wrappers/Div5050"
 import Cards from "../components/symbols/Cards"
 //Generic Styles
-import "../webflow_styles/normalize.css";
-import "../webflow_styles/webflow.css";
+import "../webflow_styles/normalize.css"
+import "../webflow_styles/webflow.css"
 
 const Product = () =>{
     const smallDescriptionDummy =

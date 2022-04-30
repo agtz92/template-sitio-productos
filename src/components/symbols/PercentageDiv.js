@@ -1,5 +1,5 @@
-import React from "react";
-import "../../webflow_styles/symbols/percentagediv.css";
+import React from "react"
+import "../../webflow_styles/symbols/percentagediv.css"
 
 const PercentageDiv = (props) => {
   const paddingleft = props.paddingleft;

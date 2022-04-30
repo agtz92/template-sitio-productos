@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 //dedicated css
-import "../../webflow_styles/symbols/navbar.css";
-import { Link } from "gatsby";
-import logo from "../../images/logo.png";
+import "../../webflow_styles/symbols/navbar.css"
+import { Link } from "gatsby"
+import logo from "../../images/logo.png"
 
 const NewNavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import "../../webflow_styles/symbols/heading.css"
 
 const Heading = (props) => {

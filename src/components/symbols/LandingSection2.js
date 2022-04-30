@@ -1,10 +1,9 @@
-import React from "react";
-import HalfHalf from "../wrappers/HalfHalf";
-import Heading from "./Heading";
-import PercentageDiv from "./PercentageDiv";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-//import background from "../../images/artworkbck.jpg";
+import React from "react"
+import HalfHalf from "../wrappers/HalfHalf"
+import Heading from "./Heading"
+import PercentageDiv from "./PercentageDiv"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const LandingSection2 = (props) => {
   return (

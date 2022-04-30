@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 //dedicated css
-import "../../webflow_styles/symbols/footer.css";
+import "../../webflow_styles/symbols/footer.css"
 
-import img from "../../images/Webp.net-resizeimage-min.jpg";
+import img from "../../images/Webp.net-resizeimage-min.jpg"
 
 const Footer = () => {
   return (

@@ -1,23 +1,21 @@
-import React, { useState } from "react";
-import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react"
+import { graphql } from "gatsby"
+import { GatsbyImage, getImage, StaticImage  } from "gatsby-plugin-image"
 
 //Generic Styles
-import "../webflow_styles/normalize.css";
-import "../webflow_styles/webflow.css";
-import "../webflow_styles/symbols/tables.css";
-import Cards from "../components/symbols/Cards";
+import "../webflow_styles/normalize.css"
+import "../webflow_styles/webflow.css"
+import "../webflow_styles/symbols/tables.css"
+import Cards from "../components/symbols/Cards"
 //Post processing
-import showdown from "showdown";
-import Container from "../components/wrappers/Container";
-import HalfHalf from "../components/wrappers/HalfHalf";
-import Heading from "../components/symbols/Heading";
-import LandingSection from "../components/symbols/LandingSection";
-import ContactForm from "../components/symbols/ContactForm";
-import Layout from "../components/layouts/Layout";
-import PercentageDiv from "../components/symbols/PercentageDiv";
+import showdown from "showdown"
+import Container from "../components/wrappers/Container"
+import HalfHalf from "../components/wrappers/HalfHalf"
+import Heading from "../components/symbols/Heading"
+import LandingSection from "../components/symbols/LandingSection"
+import ContactForm from "../components/symbols/ContactForm"
+import Layout from "../components/layouts/Layout"
+import PercentageDiv from "../components/symbols/PercentageDiv"
 
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();

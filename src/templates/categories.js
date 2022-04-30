@@ -1,13 +1,13 @@
-import React from "react";
-import {getImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import Layout from "../components/layouts/Layout";
-import ProductPreview from "../components/symbols/ProductPreview";
-import Grid3x3 from "../components/wrappers/Grid3x3";
-import Heading from "../components/symbols/Heading";
+import React from "react"
+import {getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
+import Layout from "../components/layouts/Layout"
+import ProductPreview from "../components/symbols/ProductPreview"
+import Grid3x3 from "../components/wrappers/Grid3x3"
+import Heading from "../components/symbols/Heading"
 //Generic Styles
-import "../webflow_styles/normalize.css";
-import "../webflow_styles/webflow.css";
+import "../webflow_styles/normalize.css"
+import "../webflow_styles/webflow.css"
 
 const Categorias = ({pageContext, data}) => {
   const { categoria } = pageContext

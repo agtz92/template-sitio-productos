@@ -1,6 +1,6 @@
 import React from "react"
 import "../../webflow_styles/symbols/contactform.css"
-import Heading from "./Heading";
+import Heading from "./Heading"
 
 const ContactForm = (props) =>{
 

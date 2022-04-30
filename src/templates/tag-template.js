@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
-import PropTypes from "prop-types";
-import Layout from "../components/layouts/Layout";
+import React from "react"
+import { graphql } from "gatsby"
+import PropTypes from "prop-types"
+import Layout from "../components/layouts/Layout"
 //Generic Styles
-import "../webflow_styles/normalize.css";
-import "../webflow_styles/webflow.css";
+import "../webflow_styles/normalize.css"
+import "../webflow_styles/webflow.css"
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;

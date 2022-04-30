@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react"
 //dedicated css
-import "../../webflow_styles/symbols/featurecard.css";
-import { StaticImage } from "gatsby-plugin-image";
-import SimpleCard from "./SimpleCard";
+import "../../webflow_styles/symbols/featurecard.css"
+import { StaticImage } from "gatsby-plugin-image"
+import SimpleCard from "./SimpleCard"
 
 const FeatureCard = (props) => {
   return (
