@@ -27,7 +27,7 @@ const BlogPost = ({ data }) => {
   let mainImg = IMG_SELECTOR[0];
   const [imageSelection, setImageSelection] = useState(IMG_SELECTOR[0]);
 
-  if (imageSelection === IMG_SELECTOR[0]) {
+  /*if (imageSelection === IMG_SELECTOR[0]) {
     mainImg = (
       <GatsbyImage
         image={getImage(post.frontmatter.prodimage)}
@@ -59,7 +59,7 @@ const BlogPost = ({ data }) => {
       />
     );
     console.log("IMG 3");
-  }
+  }*/
 
   return (
     <Layout>
