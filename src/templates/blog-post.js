@@ -31,7 +31,6 @@ const BlogPost = ({ data }) => {
         alt={post.frontmatter.title}
       />
     );
-    console.log("IMG 1");
   } else if (imageSelection === IMG_SELECTOR[1]) {
     mainImg = (
       <GatsbyImage
@@ -39,7 +38,6 @@ const BlogPost = ({ data }) => {
         alt={post.frontmatter.title}
       />
     );
-    console.log("IMG 2");
   } else if (imageSelection === IMG_SELECTOR[2]) {
     mainImg = (
       <GatsbyImage
@@ -54,7 +52,6 @@ const BlogPost = ({ data }) => {
         alt={post.frontmatter.title}
       />
     );
-    console.log("IMG 3");
   }
 
   return (
@@ -213,6 +210,16 @@ export const pageQuery = graphql`
         tags
         title
         prodimage {
+          childImageSharp {
+            gatsbyImageData(width: 500)
+          }
+        }
+        prodimage1 {
+          childImageSharp {
+            gatsbyImageData(width: 500)
+          }
+        }
+        prodimage2 {
           childImageSharp {
             gatsbyImageData(width: 500)
           }
