@@ -2,7 +2,7 @@
 title: Tatami
 prodimage: ../../static/assets/webp.net-resizeimage-min.jpg
 prodimage1: ../../static/assets/webp.net-resizeimage-min.jpg
-prodimage2: static/captura-de-pantalla-2022-03-13-223331.jpg
+prodimage2: ../../static/bolardos-min.jpg
 categoria: Deportes
 tags:
   - karate

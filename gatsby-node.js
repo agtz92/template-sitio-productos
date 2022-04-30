@@ -55,6 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
                   gatsbyImageData(aspectRatio: 0.5)
                 }
               }
+              
             }
           }
         }

@@ -2,7 +2,7 @@
 title: Silicon el Rollo
 prodimage: ../../static/assets/webp.net-resizeimage-min.jpg
 prodimage1: ../../static/assets/webp.net-resizeimage-min.jpg
-prodimage2: static/2HFSTKr.jpg
+prodimage2: ../../static/bolardos-min.jpg
 categoria: Neopreno
 tags:
   - silicon

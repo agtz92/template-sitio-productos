@@ -213,6 +213,12 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 500)
           }
         }
+        prodimage1 {
+          childImageSharp {
+            gatsbyImageData(width: 500)
+          }
+        }
+        
         
       }
       fields {
