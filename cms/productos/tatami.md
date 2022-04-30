@@ -1,7 +1,7 @@
 ---
 title: Tatami
 prodimage: ../../static/assets/webp.net-resizeimage-min.jpg
-prodimage1: ../../static/assets/webp.net-resizeimage-min.jpg
+prodimage1: static/7-bird-colorful-peacock-wallpaper-preview.jpg
 prodimage2: ../../static/bolardos-min.jpg
 categoria: Deportes
 tags:
