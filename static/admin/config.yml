@@ -15,8 +15,8 @@ collections:
     fields:
       - { name: title, label: Titulo, hint: Título del Producto, required: true}
       - { label: "Imagen Principal", hint: Usar una imagen en alta resolucion y horizontal, name: "prodimage", widget: image}
-      - { label: "Imagen Secundaria", hint: Usar una imagen en alta resolucion y horizontal, name: "prodimage2", widget: image}
-      - { label: "Imagen Terciaria", hint: Usar una imagen en alta resolucion y horizontal, name: "prodimage3", widget: image}
+      - { label: "Imagen Secundaria", hint: Usar una imagen en alta resolucion y horizontal, name: "prodimage1", widget: image}
+      - { label: "Imagen Terciaria", hint: Usar una imagen en alta resolucion y horizontal, name: "prodimage2", widget: image}
       - { collection: categoria, valueField: categoria, searchFields: ["categoria"], displayFields: ["categoria"], widget: relation, name: categoria, label: Categoria, required: true, multiple: false, hint: Poner cateogoria a la que pertenece el producto. OBLIGATORIO}
       - { label: "Tags", name: "tags", widget: "list", hint: Separar con comas cada tag relacionado al producto (ej. gimnasio, artes marciales, tae kwon do) poner al menos 3 tags por post, ideal 5, required: true}
       - { name: short-description, label: Descripcion Corta, widget: markdown, hint: Descripcion corta de cada producto para fines de SEO, required: true}
