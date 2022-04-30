@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -19,7 +19,6 @@ import ContactForm from "../components/symbols/ContactForm";
 import Layout from "../components/layouts/Layout";
 import PercentageDiv from "../components/symbols/PercentageDiv";
 
-
 const BlogPost = ({ data }) => {
   const converter = new showdown.Converter();
   const post = data.markdownRemark;
@@ -37,7 +36,6 @@ const BlogPost = ({ data }) => {
     console.log("IMG 1");
   } else if (imageSelection === IMG_SELECTOR[1]) {
     mainImg = (
-      
       <GatsbyImage
         image={getImage(post.frontmatter.prodimage1)}
         alt={post.frontmatter.title}
@@ -103,8 +101,11 @@ const BlogPost = ({ data }) => {
             >
               <div className="offsetimage">
                 {mainImg}
-                <div  style={{ display: "flex" }}>
-                  <div role = "button" onClick={() => setImageSelection(IMG_SELECTOR[0])} onKeyDown={() => setImageSelection(IMG_SELECTOR[0])}
+                <div style={{ display: "flex" }}>
+                  <div
+                    role="button"
+                    onClick={() => setImageSelection(IMG_SELECTOR[0])}
+                    onKeyDown={() => setImageSelection(IMG_SELECTOR[0])}
                     style={{
                       width: "100px",
                       paddingTop: "10px",
@@ -117,7 +118,10 @@ const BlogPost = ({ data }) => {
                       width="50"
                     />
                   </div>
-                  <div role = "button" onClick={() => setImageSelection(IMG_SELECTOR[1])} onKeyDown={() => setImageSelection(IMG_SELECTOR[1])}
+                  <div
+                    role="button"
+                    onClick={() => setImageSelection(IMG_SELECTOR[1])}
+                    onKeyDown={() => setImageSelection(IMG_SELECTOR[1])}
                     style={{
                       width: "100px",
                       paddingTop: "10px",
@@ -130,7 +134,10 @@ const BlogPost = ({ data }) => {
                       width="50"
                     />
                   </div>
-                  <div role = "button" onClick={() => setImageSelection(IMG_SELECTOR[2])} onKeyDown={() => setImageSelection(IMG_SELECTOR[2])}
+                  <div
+                    role="button"
+                    onClick={() => setImageSelection(IMG_SELECTOR[2])}
+                    onKeyDown={() => setImageSelection(IMG_SELECTOR[2])}
                     style={{
                       width: "100px",
                       paddingTop: "10px",
@@ -212,17 +219,6 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 500)
           }
         }
-        prodimage1 {
-          childImageSharp {
-            gatsbyImageData(width: 500)
-          }
-        }
-        prodimage2 {
-          childImageSharp {
-            gatsbyImageData(width: 500)
-          }
-        }
-        
       }
       fields {
         slug
