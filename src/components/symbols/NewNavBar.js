@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 //dedicated css
 import "../../webflow_styles/symbols/navbar.css";
 import { Link } from "gatsby";

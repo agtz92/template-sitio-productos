@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 //dedicated css
 import "../../webflow_styles/symbols/cards.css";
 import { FaMedal } from "@react-icons/all-files/fa/FaMedal";
@@ -18,13 +17,7 @@ const Cards = (props) => {
         props.darkmodetext ? " darkmode-text" : ""
       }`}
     >
-      {props.image ? (
-        <div className="div-number-circle">
-          <StaticImage image={props.image} alt={props.alt} />
-        </div>
-      ) : (
-        ""
-      )}
+      
 
       <div className="cards-title color1">{props.title}</div>
       <div className="label-titles color3" >
